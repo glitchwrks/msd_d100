@@ -1345,7 +1345,7 @@ SELDR$	db	'Selected drive ', 0
 CURDRV$	db	'Current drive is ', 0
 NORDY$	db	CR, LF, 'Drive not ready', CR, LF, 0
 DRVTRK$	db	CR, LF, 'Current track is ', 0
-TRKREG$	db	'    Track Register: ', 0
+TRKREG$	db	'     Track Register: ', 0
 SECREG$	db	CR, LF, '    Sector Register: ', 0
 STREG$	db	CR, LF, '    Status Register: ', 0
 MSDREG$ db	CR, LF, LF, 'MSD Status Register: ', 0
