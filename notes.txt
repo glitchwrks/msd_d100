@@ -1,0 +1,61 @@
+Default base address seems to be 0x30 - 0x37
+
+FD1771 A0, A1 connected to S-100 A0, A1 (buffered)
+
+E1 status register                 to internal bidirectional bus, inverting
+D1 from S-100 data out             to internal bidirectional bus, inverting
+C1 from internal bidirectional bus to S-100 data in bus, inverting
+B1 ??? to S-100 data in bus, noninverting, might be switch register related?
+
+Status register at 0x34, 0x35:
+	Bit 0	Drive Select bit 0 (binary)
+	Bit 1	Drive Select bit 1 (binary)
+	Bit 2
+	Bit 3
+	Bit 4	Disk Initialization Status (1 = ON)
+	Bit 5	*READY flip-flop
+	Bit 6	FDC INTRQ
+	Bit 7	FDC DRQ
+
+NOTE: Bit 4, Disk Initialization, is irrelevant if SW1, position 8 is open (disk init
+hard disabled)
+
+FD1771 at 0x30 - 0x33
+
+G1 pin 5 = *BINARY_DS1
+G1 pin 6 = BINARY_DS1
+H1 pin 8 = BINARY_DS0
+H1 pin 9 = *BINARY_DS0
+
+Control register at 0x35
+	Bit 0	Drive select bit 0 (binary)
+	Bit 1	Drive select bit 1 (binary)
+	Bit 2
+	Bit 3
+	Bit 4	Disk Initialization control (1 = ON)
+	Bit 5	Ready arm
+
+NOTE: Bit 4, Disk Initialization, is ignored if SW1, position 8 is open (disk init hard
+disabled)
+
+TO SELECT A DRIVE:
+
+Write a byte to the control register at 0x35, bit 5 must always be high, two low bits
+select the drive:
+	0x20	Invalid
+	0x21	*DS1 active
+	0x22	*DS2 active
+	0x23	*DS3 active
+
+SWITCH SW1:
+
+	Pos 1
+	Pos 2
+	Pos 3
+	Pos 4
+	Pos 5
+	Pos 6
+	Pos 7
+	Pos 8	OPEN for disk init disable, CLOSED for disk init by CONTROL_BIT4
+
+Head Load output is used to enable the motors on Shugart interface.
