@@ -15,6 +15,6 @@ This utility is a disk/controller exerciser for the D-100. It allows drive selec
 
 `MSDEXER` was developed using our version of the [a85 assember](https://github.com/glitchwrks/a85). It should assemble with little effort on most other 8080-compatible assemblers. `MSDEXER` has been tested on a 2 MHz 8080 system with 5.25" 40-track floppies.
 
-`MSDEXER` is based on P. Linstruth's TFEXER, which is based on Mike Douglas's AFEXER. See source header for copyright/license information.
+`MSDEXER` is based on P. Linstruth's `TFEXER`, which is based on Mike Douglas's `AFEXER`. See source header for copyright/license information.
 
 Default disk format is: 40 tracks, 18 sectors per track, 128-byte sectors. This is the "CP/M minidisk standard" and is also compatible with Cromemco CDOS 5.25" SSSD disks.
