@@ -27,6 +27,8 @@ The `schematics` subdirectory contains a KiCAD project in which a partial schema
 
 Register mapping and the board-specific control/status ports were figured out using this schematic, and `MSDEXER` written once a complete enough understanding was obtained.
 
+There are PDF exports of the schematics in `schematics/pdfs/`. Note that the "spare gates" shown are not necessarily unused on the board, but their function has not yet been mapped.
+
 ### notes.txt
 
 This is a textfile containing notes typed up during the reverse engineering process. They are free-form and not particularly organized, but presented here since they may help answer questions not made obvious in the schematic or `MSDEXER` source.
