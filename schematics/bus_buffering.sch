@@ -1,0 +1,718 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr USLedger 17000 11000
+encoding utf-8
+Sheet 3 3
+Title "MSD D-100 Floppy Controller"
+Date "2020-06-09"
+Rev "1"
+Comp "Glitch Works, LLC"
+Comment1 "J. Chapman"
+Comment2 "WORK IN PROGRESS"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L gw_old_logic:81LS98 E?
+U 1 1 5F30900F
+P 2600 2400
+AR Path="/5F30900F" Ref="E?"  Part="1" 
+AR Path="/5F2E6CCD/5F30900F" Ref="E1"  Part="1" 
+F 0 "E1" H 2600 2500 50  0000 C CNN
+F 1 "81LS98" H 2600 2400 50  0000 C CNN
+F 2 "" H 2600 2400 50  0001 C CNN
+F 3 "" H 2600 2400 50  0001 C CNN
+	1    2600 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 3300 2300 2    50   BiDi ~ 0
+*D0
+Text GLabel 3300 2200 2    50   BiDi ~ 0
+*D1
+Text GLabel 3300 2100 2    50   BiDi ~ 0
+*D2
+Text GLabel 3300 2000 2    50   BiDi ~ 0
+*D3
+Text GLabel 3300 2650 2    50   BiDi ~ 0
+*D4
+Text GLabel 3300 2750 2    50   BiDi ~ 0
+*D5
+Text GLabel 3300 2850 2    50   BiDi ~ 0
+*D6
+Text GLabel 3300 2950 2    50   BiDi ~ 0
+*D7
+Wire Wire Line
+	3300 2950 3100 2950
+Wire Wire Line
+	3100 2850 3300 2850
+Wire Wire Line
+	3300 2750 3100 2750
+Wire Wire Line
+	3100 2650 3300 2650
+Wire Wire Line
+	3300 2000 3100 2000
+Wire Wire Line
+	3100 2100 3300 2100
+Wire Wire Line
+	3300 2200 3100 2200
+Wire Wire Line
+	3100 2300 3300 2300
+Text GLabel 1900 2950 0    50   Output ~ 0
+FDC_DRQ
+Wire Wire Line
+	1900 2950 2100 2950
+Text GLabel 1900 2850 0    50   Output ~ 0
+FDC_INTRQ
+Wire Wire Line
+	1900 2850 2100 2850
+Text GLabel 1900 1850 0    50   Output ~ 0
+*STATUS_SELECT
+Wire Wire Line
+	2100 1850 1900 1850
+Text GLabel 1900 2500 0    50   Output ~ 0
+*STATUS_SELECT
+Wire Wire Line
+	2100 2500 1900 2500
+Text GLabel 1900 2750 0    50   Output ~ 0
+*READY_FF
+Wire Wire Line
+	1900 2750 2100 2750
+Text GLabel 1900 2650 0    50   Output ~ 0
+DINIT
+Wire Wire Line
+	1900 2650 2100 2650
+Text GLabel 1900 2300 0    50   Output ~ 0
+BINARY_DS0
+Wire Wire Line
+	1900 2300 2100 2300
+Text GLabel 1900 2100 0    50   Output ~ 0
+CONTROL_BIT2
+Wire Wire Line
+	1900 2100 2100 2100
+Text GLabel 1900 2200 0    50   Output ~ 0
+BINARY_DS1
+Wire Wire Line
+	1900 2200 2100 2200
+Text GLabel 1900 2000 0    50   Output ~ 0
+CONTROL_BIT3
+Wire Wire Line
+	1900 2000 2100 2000
+$Comp
+L gw_7400:74LS27 J?
+U 2 1 5F31301C
+P 6700 3650
+AR Path="/5F31301C" Ref="J?"  Part="2" 
+AR Path="/5F2E6CCD/5F31301C" Ref="J2"  Part="2" 
+F 0 "J2" H 6700 3700 50  0000 C CNN
+F 1 "74LS27" H 6700 3600 50  0000 C CNN
+F 2 "" H 6700 3650 50  0000 C CNN
+F 3 "" H 6700 3650 50  0000 C CNN
+	2    6700 3650
+	1    0    0    -1  
+$EndComp
+Text GLabel 5900 3500 0    50   Output ~ 0
+*CONTROL_SELECT
+Wire Wire Line
+	6100 3500 5900 3500
+Text GLabel 5900 3800 0    50   Output ~ 0
+*BPWR
+Text GLabel 5900 3650 0    50   Output ~ 0
+*A0
+Wire Wire Line
+	6100 3650 5900 3650
+Wire Wire Line
+	5900 3800 6100 3800
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F313028
+P 7700 3850
+AR Path="/5F313028" Ref="TP?"  Part="1" 
+AR Path="/5F2E6CCD/5F313028" Ref="TP6"  Part="1" 
+F 0 "TP6" H 7750 4100 50  0000 R CNN
+F 1 "TestPoint" H 7640 3968 50  0001 R CNN
+F 2 "" H 7900 3850 50  0001 C CNN
+F 3 "~" H 7900 3850 50  0001 C CNN
+	1    7700 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L gw_7400:74LS74 G?
+U 1 1 5F31302E
+P 8350 3650
+AR Path="/5F31302E" Ref="G?"  Part="1" 
+AR Path="/5F2E6CCD/5F31302E" Ref="G1"  Part="1" 
+F 0 "G1" H 8350 3700 50  0000 C CNN
+F 1 "74LS74" H 8350 3600 50  0000 C CNN
+F 2 "" H 8350 3650 50  0000 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 8350 4292 50  0001 C CNN
+	1    8350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L gw_7400:74LS74 G?
+U 2 1 5F313034
+P 4550 5600
+AR Path="/5F313034" Ref="G?"  Part="2" 
+AR Path="/5F2E6CCD/5F313034" Ref="G1"  Part="2" 
+F 0 "G1" H 4550 5650 50  0000 C CNN
+F 1 "74LS74" H 4550 5550 50  0000 C CNN
+F 2 "" H 4550 5600 50  0000 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4550 6242 50  0001 C CNN
+	2    4550 5600
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 3450 2    50   Input ~ 0
+*BINARY_DS0
+Wire Wire Line
+	9150 3450 8950 3450
+Text GLabel 5350 5800 2    50   Input ~ 0
+CONTROL_BIT2
+Wire Wire Line
+	5350 5800 5150 5800
+Text GLabel 7550 3450 0    50   BiDi ~ 0
+*D0
+Wire Wire Line
+	7750 3450 7550 3450
+Text GLabel 3750 5400 0    50   BiDi ~ 0
+*D2
+Wire Wire Line
+	3950 5400 3750 5400
+Wire Wire Line
+	7700 3850 7700 3650
+$Comp
+L power:VCC #PWR?
+U 1 1 5F313046
+P 8350 4300
+AR Path="/5F313046" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F313046" Ref="#PWR0118"  Part="1" 
+F 0 "#PWR0118" H 8350 4150 50  0001 C CNN
+F 1 "VCC" H 8368 4476 50  0000 C CNN
+F 2 "" H 8350 4300 50  0001 C CNN
+F 3 "" H 8350 4300 50  0001 C CNN
+	1    8350 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8350 4300 8350 4200
+$Comp
+L power:VCC #PWR?
+U 1 1 5F31304D
+P 4550 6250
+AR Path="/5F31304D" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F31304D" Ref="#PWR0119"  Part="1" 
+F 0 "#PWR0119" H 4550 6100 50  0001 C CNN
+F 1 "VCC" H 4568 6426 50  0000 C CNN
+F 2 "" H 4550 6250 50  0001 C CNN
+F 3 "" H 4550 6250 50  0001 C CNN
+	1    4550 6250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 6250 4550 6150
+Text GLabel 4750 4850 2    50   Input ~ 0
+*POC
+Wire Wire Line
+	4550 4850 4750 4850
+Wire Wire Line
+	4550 4850 4550 5050
+Text GLabel 8550 2900 2    50   Input ~ 0
+*POC
+Wire Wire Line
+	8350 2900 8550 2900
+Wire Wire Line
+	8350 2900 8350 3100
+$Comp
+L gw_7400:74LS74 F?
+U 1 1 5F31C050
+P 4550 7450
+AR Path="/5F31C050" Ref="F?"  Part="1" 
+AR Path="/5F2E6CCD/5F31C050" Ref="F1"  Part="1" 
+F 0 "F1" H 4550 7500 50  0000 C CNN
+F 1 "74LS74" H 4550 7400 50  0000 C CNN
+F 2 "" H 4550 7450 50  0000 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4550 8092 50  0001 C CNN
+	1    4550 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L gw_7400:74LS74 F?
+U 2 1 5F31C056
+P 4550 9300
+AR Path="/5F31C056" Ref="F?"  Part="2" 
+AR Path="/5F2E6CCD/5F31C056" Ref="F1"  Part="2" 
+F 0 "F1" H 4550 9350 50  0000 C CNN
+F 1 "74LS74" H 4550 9250 50  0000 C CNN
+F 2 "" H 4550 9300 50  0000 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 4550 9942 50  0001 C CNN
+	2    4550 9300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5350 7650 2    50   Output ~ 0
+CONTROL_BIT3
+Wire Wire Line
+	5350 7650 5150 7650
+Text GLabel 5350 9500 2    50   Output ~ 0
+DINIT
+Wire Wire Line
+	5350 9500 5150 9500
+Text GLabel 3750 7250 0    50   BiDi ~ 0
+*D3
+Wire Wire Line
+	3750 7250 3950 7250
+Text GLabel 3750 9100 0    50   BiDi ~ 0
+*D4
+Wire Wire Line
+	3950 9100 3750 9100
+$Comp
+L power:VCC #PWR?
+U 1 1 5F31C064
+P 4550 8100
+AR Path="/5F31C064" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F31C064" Ref="#PWR0120"  Part="1" 
+F 0 "#PWR0120" H 4550 7950 50  0001 C CNN
+F 1 "VCC" H 4568 8276 50  0000 C CNN
+F 2 "" H 4550 8100 50  0001 C CNN
+F 3 "" H 4550 8100 50  0001 C CNN
+	1    4550 8100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 8100 4550 8000
+$Comp
+L power:VCC #PWR?
+U 1 1 5F31C06B
+P 4550 9950
+AR Path="/5F31C06B" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F31C06B" Ref="#PWR0121"  Part="1" 
+F 0 "#PWR0121" H 4550 9800 50  0001 C CNN
+F 1 "VCC" H 4568 10126 50  0000 C CNN
+F 2 "" H 4550 9950 50  0001 C CNN
+F 3 "" H 4550 9950 50  0001 C CNN
+	1    4550 9950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 9950 4550 9850
+Wire Wire Line
+	3950 9300 3900 9300
+Connection ~ 3900 7450
+Wire Wire Line
+	3900 7450 3950 7450
+Wire Wire Line
+	3550 7450 3900 7450
+Text GLabel 2150 7300 0    50   Output ~ 0
+A0
+Wire Wire Line
+	2350 7300 2150 7300
+Text GLabel 2150 7450 0    50   Output ~ 0
+*CONTROL_SELECT
+Wire Wire Line
+	2350 7450 2150 7450
+Text GLabel 2150 7600 0    50   Output ~ 0
+*BPWR
+Wire Wire Line
+	2150 7600 2350 7600
+Connection ~ 3900 7650
+Wire Wire Line
+	3900 7650 3900 7450
+Wire Wire Line
+	3900 9300 3900 7850
+$Comp
+L gw_7400:74LS27 J?
+U 1 1 5F31C07F
+P 2950 7450
+AR Path="/5F31C07F" Ref="J?"  Part="1" 
+AR Path="/5F2E6CCD/5F31C07F" Ref="J2"  Part="1" 
+F 0 "J2" H 2950 7500 50  0000 C CNN
+F 1 "74LS27" H 2950 7400 50  0000 C CNN
+F 2 "" H 2950 7450 50  0000 C CNN
+F 3 "" H 2950 7450 50  0000 C CNN
+	1    2950 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 7650 3700 7650
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F31C086
+P 3700 7650
+AR Path="/5F31C086" Ref="TP?"  Part="1" 
+AR Path="/5F2E6CCD/5F31C086" Ref="TP5"  Part="1" 
+F 0 "TP5" V 3700 8000 50  0000 R CNN
+F 1 "TestPoint" H 3640 7768 50  0001 R CNN
+F 2 "" H 3900 7650 50  0001 C CNN
+F 3 "~" H 3900 7650 50  0001 C CNN
+	1    3700 7650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3700 7850 0    50   Input ~ 0
+*CONTROL_WR_0
+Wire Wire Line
+	3700 7850 3900 7850
+Connection ~ 3900 7850
+Wire Wire Line
+	3900 7850 3900 7650
+Text GLabel 4750 8550 2    50   Input ~ 0
+*POC
+Wire Wire Line
+	4550 8550 4750 8550
+Wire Wire Line
+	4550 8550 4550 8750
+Text GLabel 4750 6700 2    50   Input ~ 0
+*POC
+Wire Wire Line
+	4550 6700 4750 6700
+Wire Wire Line
+	4550 6700 4550 6900
+$Comp
+L gw_7400:74LS32 I?
+U 1 1 5F326594
+P 9850 7700
+AR Path="/5F326594" Ref="I?"  Part="1" 
+AR Path="/5F2E6CCD/5F326594" Ref="I2"  Part="1" 
+F 0 "I2" H 9850 7750 50  0000 C CNN
+F 1 "74LS32" H 9850 7650 50  0000 C CNN
+F 2 "" H 9850 7700 50  0000 C CNN
+F 3 "" H 9850 7700 50  0000 C CNN
+	1    9850 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L gw_7400:74LS32 I?
+U 2 1 5F32659A
+P 9850 8500
+AR Path="/5F32659A" Ref="I?"  Part="2" 
+AR Path="/5F2E6CCD/5F32659A" Ref="I2"  Part="2" 
+F 0 "I2" H 9850 8550 50  0000 C CNN
+F 1 "74LS32" H 9850 8450 50  0000 C CNN
+F 2 "" H 9850 8500 50  0000 C CNN
+F 3 "" H 9850 8500 50  0000 C CNN
+	2    9850 8500
+	1    0    0    -1  
+$EndComp
+Text GLabel 9050 7600 0    50   Output ~ 0
+BA0
+Text GLabel 9050 8400 0    50   Output ~ 0
+BA1
+Wire Wire Line
+	9050 8400 9250 8400
+Wire Wire Line
+	9050 7600 9250 7600
+$Comp
+L power:GND #PWR?
+U 1 1 5F3265A4
+P 9150 8800
+AR Path="/5F3265A4" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F3265A4" Ref="#PWR0122"  Part="1" 
+F 0 "#PWR0122" H 9150 8550 50  0001 C CNN
+F 1 "GND" H 9155 8624 50  0000 C CNN
+F 2 "" H 9150 8800 50  0001 C CNN
+F 3 "" H 9150 8800 50  0001 C CNN
+	1    9150 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 8800 9150 8600
+Wire Wire Line
+	9150 8600 9250 8600
+$Comp
+L power:GND #PWR?
+U 1 1 5F3265AC
+P 9150 8000
+AR Path="/5F3265AC" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F3265AC" Ref="#PWR0123"  Part="1" 
+F 0 "#PWR0123" H 9150 7750 50  0001 C CNN
+F 1 "GND" H 9155 7824 50  0000 C CNN
+F 2 "" H 9150 8000 50  0001 C CNN
+F 3 "" H 9150 8000 50  0001 C CNN
+	1    9150 8000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 8000 9150 7800
+Wire Wire Line
+	9150 7800 9250 7800
+Text GLabel 10650 8500 2    50   Input ~ 0
+A1
+Wire Wire Line
+	10450 8500 10650 8500
+Text GLabel 10650 7700 2    50   Input ~ 0
+A0
+Wire Wire Line
+	10450 7700 10650 7700
+$Comp
+L gw_7400:74LS04 H?
+U 1 1 5F3265B8
+P 13850 7650
+AR Path="/5F3265B8" Ref="H?"  Part="1" 
+AR Path="/5F2E6CCD/5F3265B8" Ref="H2"  Part="1" 
+F 0 "H2" H 13800 7650 50  0000 C CNN
+F 1 "74LS04" H 14050 7550 50  0000 C CNN
+F 2 "" H 13850 7650 50  0000 C CNN
+F 3 "" H 13850 7650 50  0000 C CNN
+	1    13850 7650
+	1    0    0    -1  
+$EndComp
+$Comp
+L gw_7400:74LS04 H?
+U 3 1 5F3265BE
+P 9800 9200
+AR Path="/5F3265BE" Ref="H?"  Part="3" 
+AR Path="/5F2E6CCD/5F3265BE" Ref="H2"  Part="3" 
+F 0 "H2" H 9750 9200 50  0000 C CNN
+F 1 "74LS04" H 10000 9100 50  0000 C CNN
+F 2 "" H 9800 9200 50  0000 C CNN
+F 3 "" H 9800 9200 50  0000 C CNN
+	3    9800 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L gw_7400:74LS04 H?
+U 6 1 5F3265C4
+P 12750 7650
+AR Path="/5F3265C4" Ref="H?"  Part="6" 
+AR Path="/5F2E6CCD/5F3265C4" Ref="H2"  Part="6" 
+F 0 "H2" H 12700 7650 50  0000 C CNN
+F 1 "74LS04" H 12950 7550 50  0000 C CNN
+F 2 "" H 12750 7650 50  0000 C CNN
+F 3 "" H 12750 7650 50  0000 C CNN
+	6    12750 7650
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 9200 0    50   Output ~ 0
+A0
+Wire Wire Line
+	9350 9200 9150 9200
+Text GLabel 10450 9200 2    50   Input ~ 0
+*A0
+Wire Wire Line
+	10250 9200 10450 9200
+Text GLabel 12100 7650 0    50   Output ~ 0
+*BPOC
+Wire Wire Line
+	12100 7650 12300 7650
+Wire Wire Line
+	13200 7650 13400 7650
+Text GLabel 14500 7650 2    50   Input ~ 0
+*POC
+Wire Wire Line
+	14300 7650 14500 7650
+$Comp
+L gw_7400:74LS74 H1
+U 1 1 5F397E38
+P 15050 1800
+F 0 "H1" H 15050 1850 50  0000 C CNN
+F 1 "74LS74" H 15050 1750 50  0000 C CNN
+F 2 "" H 15050 1800 50  0000 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 15050 2442 50  0001 C CNN
+	1    15050 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F39D359
+P 15050 2450
+AR Path="/5F39D359" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F39D359" Ref="#PWR0124"  Part="1" 
+F 0 "#PWR0124" H 15050 2300 50  0001 C CNN
+F 1 "VCC" H 15068 2626 50  0000 C CNN
+F 2 "" H 15050 2450 50  0001 C CNN
+F 3 "" H 15050 2450 50  0001 C CNN
+	1    15050 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	15050 2450 15050 2350
+Wire Wire Line
+	14450 1600 14350 1600
+Wire Wire Line
+	14350 1600 14350 1150
+Wire Wire Line
+	14350 1150 15750 1150
+Wire Wire Line
+	15750 1150 15750 2000
+Wire Wire Line
+	15750 2000 15650 2000
+$Comp
+L gw_7400:74LS04 H?
+U 4 1 5F3A728A
+P 13800 1800
+AR Path="/5F3A728A" Ref="H?"  Part="4" 
+AR Path="/5F2E6CCD/5F3A728A" Ref="H2"  Part="4" 
+F 0 "H2" H 13750 1800 50  0000 C CNN
+F 1 "74LS04" H 14000 1700 50  0000 C CNN
+F 2 "" H 13800 1800 50  0000 C CNN
+F 3 "" H 13800 1800 50  0000 C CNN
+	4    13800 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14250 1800 14450 1800
+$Comp
+L Device:C C1
+U 1 1 5F3AC89D
+P 13150 2150
+F 0 "C1" H 13265 2197 50  0000 L CNN
+F 1 "470p" H 13265 2104 50  0000 L CNN
+F 2 "" H 13188 2000 50  0001 C CNN
+F 3 "~" H 13150 2150 50  0001 C CNN
+	1    13150 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 5F3AD9FD
+P 13150 2400
+F 0 "#PWR0125" H 13150 2150 50  0001 C CNN
+F 1 "GND" H 13155 2224 50  0000 C CNN
+F 2 "" H 13150 2400 50  0001 C CNN
+F 3 "" H 13150 2400 50  0001 C CNN
+	1    13150 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13150 2300 13150 2400
+Wire Wire Line
+	13150 2000 13150 1800
+Wire Wire Line
+	13150 1800 13350 1800
+$Comp
+L gw_7400:74LS04 H?
+U 5 1 5F3B5E8D
+P 12000 1800
+AR Path="/5F3B5E8D" Ref="H?"  Part="5" 
+AR Path="/5F2E6CCD/5F3B5E8D" Ref="H2"  Part="5" 
+F 0 "H2" H 11950 1800 50  0000 C CNN
+F 1 "74LS04" H 12200 1700 50  0000 C CNN
+F 2 "" H 12000 1800 50  0000 C CNN
+F 3 "" H 12000 1800 50  0000 C CNN
+	5    12000 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 5F3BCF41
+P 12800 1800
+F 0 "R19" V 12900 1800 50  0000 C CNN
+F 1 "47R" V 12800 1800 50  0000 C CNN
+F 2 "" V 12730 1800 50  0001 C CNN
+F 3 "~" H 12800 1800 50  0001 C CNN
+	1    12800 1800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12450 1800 12650 1800
+Wire Wire Line
+	12950 1800 13150 1800
+Connection ~ 13150 1800
+Text GLabel 11350 1800 0    50   Output ~ 0
+*BCLOCK
+Wire Wire Line
+	11350 1800 11550 1800
+$Comp
+L power:VCC #PWR?
+U 1 1 5F3C5C29
+P 15050 1050
+AR Path="/5F3C5C29" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F3C5C29" Ref="#PWR0126"  Part="1" 
+F 0 "#PWR0126" H 15050 900 50  0001 C CNN
+F 1 "VCC" H 15068 1226 50  0000 C CNN
+F 2 "" H 15050 1050 50  0001 C CNN
+F 3 "" H 15050 1050 50  0001 C CNN
+	1    15050 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15050 1050 15050 1250
+Text GLabel 15850 1600 2    50   Input ~ 0
+1MHZ
+Wire Wire Line
+	15650 1600 15850 1600
+Text GLabel 9150 3850 2    50   Input ~ 0
+BINARY_DS0
+Wire Wire Line
+	9150 3850 8950 3850
+Wire Wire Line
+	9150 1600 8950 1600
+Wire Wire Line
+	8350 1050 8350 1250
+Wire Wire Line
+	8350 1050 8550 1050
+Text GLabel 8550 1050 2    50   Input ~ 0
+*POC
+Wire Wire Line
+	7700 1800 7750 1800
+Wire Wire Line
+	7700 3650 7700 2750
+Wire Wire Line
+	8350 2450 8350 2350
+$Comp
+L power:VCC #PWR?
+U 1 1 5F39F627
+P 8350 2450
+AR Path="/5F39F627" Ref="#PWR?"  Part="1" 
+AR Path="/5F2E6CCD/5F39F627" Ref="#PWR0127"  Part="1" 
+F 0 "#PWR0127" H 8350 2300 50  0001 C CNN
+F 1 "VCC" H 8368 2626 50  0000 C CNN
+F 2 "" H 8350 2450 50  0001 C CNN
+F 3 "" H 8350 2450 50  0001 C CNN
+	1    8350 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7550 1600 7750 1600
+Text GLabel 7550 1600 0    50   BiDi ~ 0
+*D1
+Wire Wire Line
+	9150 2000 8950 2000
+$Comp
+L gw_7400:74LS74 H1
+U 2 1 5F398567
+P 8350 1800
+F 0 "H1" H 8350 1850 50  0000 C CNN
+F 1 "74LS74" H 8350 1750 50  0000 C CNN
+F 2 "" H 8350 1800 50  0000 C CNN
+F 3 "74xx/74hc_hct74.pdf" H 8350 2442 50  0001 C CNN
+	2    8350 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 7700 3650
+Wire Wire Line
+	7700 3650 7750 3650
+Wire Wire Line
+	7300 3650 7700 3650
+Text GLabel 7500 2750 0    50   Input ~ 0
+*DRIVE_SELECT_LATCH_WR
+Wire Wire Line
+	7500 2750 7700 2750
+Connection ~ 7700 2750
+Wire Wire Line
+	7700 2750 7700 1800
+Text GLabel 9150 1600 2    50   Input ~ 0
+*BINARY_DS1
+Text GLabel 9150 2000 2    50   Input ~ 0
+BINARY_DS1
+Text GLabel 5350 9100 2    50   Output ~ 0
+*DINIT
+Wire Wire Line
+	5350 9100 5150 9100
+Text Notes 4650 9000 0    60   ~ 0
+*DINIT LOW = Allow disk initialization
+Wire Wire Line
+	3900 7450 3900 5600
+Wire Wire Line
+	3900 5600 3950 5600
+Text Notes 13650 2500 0    60   ~ 0
+System Clock Divider
+Text Notes 7050 4350 0    60   ~ 0
+Drive Select Latches
+Text Notes 2800 7050 0    60   ~ 0
+Board Control Latches
+Text Notes 2100 3250 0    60   ~ 0
+Board Status Register
+Text Notes 12800 8000 0    60   ~ 0
+Power-On Clear Buffering
+Text Notes 9450 9500 0    60   ~ 0
+Address Buffering
+$EndSCHEMATC
